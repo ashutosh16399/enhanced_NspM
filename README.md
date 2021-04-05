@@ -57,6 +57,14 @@ Predict the SPARQL query for a given question it will store the detailed output 
 python translate.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
 ```
 
+### The Demochatbot module (will keep updating)
+
+run the following command to run a chatbot on your local system, if you have trained your own model use its directory, else unzip  and use already trained NspM model on art_30 template.
+
+```bash
+python application.py --input data/art_30 --output data/art_30
+```
+
 
 ## Use cases & integrations
 
