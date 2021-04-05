@@ -92,15 +92,15 @@ def translate(sentence,ou_dir):
   print('Input: %s' % (sentence))
   print('Predicted translation: {}'.format(result))
 
-  attention_plot = attention_plot[:len(result.split(' ')), :len(sentence.split(' '))]
-  plot_attention(attention_plot, sentence.split(' '), result.split(' '),ou_dir)
+  '''attention_plot = attention_plot[:len(result.split(' ')), :len(sentence.split(' '))]
+  plot_attention(attention_plot, sentence.split(' '), result.split(' '),ou_dir)'''
   return result
 
 inputs = args.inputstr
 model_dir = input_dir
 model_dir+='/training_checkpoints'
 checkpoint.restore(tf.train.latest_checkpoint(model_dir))
-finaltrans = "input qurey : \n"
+"""finaltrans = "input qurey : \n"
 finaltrans += inputs
 finaltrans += "\n \n \n output qurey : \n"
 finaltranso = translate(inputs,input_dir)
@@ -112,4 +112,4 @@ print('Decoded translation: {}'.format(finaltranso))
 finaltrans += finaltranso
 outputfile = open((input_dir+'/output_query.txt'),'w',encoding="utf8")
 outputfile.writelines([finaltrans])
-outputfile.close()
+outputfile.close()"""
